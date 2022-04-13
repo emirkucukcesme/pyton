@@ -1,0 +1,212 @@
+---------------------------------------------------------PYTHON ÇALIŞMA DÖKÜMANLARI------------------------------------------------------
+SAYILAR İKİYE AYRILIR;
+
+12 integer ondalıksız,
+12.1 float ondalık,
+
+stringler karakter dizileridir. 
+çift tırnak içerisinde belirtilir.
+
+type() içerisine yazılan değerin, float,type,string mi olduğunu bize söyler.
+ 
+ATAMA İŞLEMLERİ;
+
+a = "emir küçükçeşme"
+a 
+"emir küçükçeşme" 
+
+----FONKSİYONLAR----
+
+-LEN() METODU-
+içerisine girilen ifadenin boyutunu veriyor 
+
+len("emirküçükçeşme")
+14
+
+-UPPER() & LOWER() METODLARI-
+
+emirküçükçeşme.upper() string dizini büyük harfe çevirir
+EMİRKÜÇÜKÇEŞME
+
+EMİRKÜÇÜKÇEŞME.lowe()  string dizini küçük harfe çevirir
+emirküçükçeşme 
+
+islower:içine girilen stringe bu küçük mü sorusunu sorar sonucunda ise true,false cevabını verir.
+isupper:içine girilen stringe bu büyük mü sorusunu sorar sonucunda ise true,false cevabını verir.
+
+-REPLACE METODU-
+string içerisindeki harfleri değiştirmek amaçlı kullanılır.
+
+"emirküçükçeşme".replace("e","a")
+amirküçükçeşma
+
+-STRİPT METODU-
+istenmeyen kelimeleri kırpmak amaçlı kullanılır.
+
+"emirküçükçeşme".stript("e")
+mirküçükçşm
+
+-dir()-
+
+dir(str) sonucunda parantez içerisine girilen string yapısına uygulanabilecek metodların listesini bize sunar.
+
+---SUBSTRİNG---
+veri yapılarının içerisindeki alt birimlere erişmek için kullanılır.
+
+"emir"[0]
+e
+
+"emir"[1]
+m 
+
+"emirküçükçeşme"[0:3]
+emi
+
+---DEĞİŞKENLER---
+
+a = 8888888 bu bir int değişkenidir.
+b = "emirküçükçeşme" bu bir str değişkenidir.
+
+-TYPE DÖNÜŞÜMLERİ-
+int bir ifadeyi str ifadesine çevirmek.
+
+toplama_bir = input() 10
+toplama_iki = input() 20
+
+toplama_bir + toplama_iki
+ 
+sonucunda 1020 str cinsinden algılayarak iki satırı toplar doğrusu,
+
+int(toplama_bir) + int(toplama_iki) sonucunda 30 çıktısını verir bize.
+
+-PRİNT() FONKSİYONU-
+içerisine girilen değeri yazdırmak amaçlı kullanılır.
+
+print("emir","küçükçeşme")
+emir küçükçeşme
+
+print("emir","küçükçeşme", sep = "_")
+emir_küçükçeşme
+
+---VERİ YAPILARI---
+
+LİSTELER;
+
+python da liste oluşturmakak için iki yöntem vardır.
+1-[]
+2-list()
+
+notlar = [50,60,70,90]
+
+liste = ["a",19.3,90]
+liste
+["a",19.3,90]
+birbirinden farklı typlerı barındırabilir.
+
+örneğin type(notlar) sonucunda list çıktısını ekrana verir
+
+iki listeyi birleştirerek oluşturmak için
+
+tüm_liste = [notlar, liste] sonucunda iki liste birleştirilmiş bir şekilde karşımıza çıkar.
+
+LİSTELERİN İÇERİSİNDEKİ ELEMANLARA ERİŞMEK VE DEĞİŞİKLİK YAPMAK;
+
+liste = [10,20,30,40,50]
+
+liste[1] liste içindeki elemanlara erişmek için.
+10
+
+liste[0:2]  0 dan 2 ye kadar anlamına gelir.
+10,20
+ 
+LİSTE İÇİ ELEMAN DEĞİŞTİRMEK;
+
+liste= ["emir","ömür","eda","nagehan"]
+
+liste[1] = "yusuf"
+
+sonuç ["emir","yusuf","eda","nagehan"]
+
+LİSTEYE ELEMEAN EKLEMEK;
+
+liste = liste + ["efe"]
+liste
+["emir","yusuf","eda","nagehan","efe"]
+
+LİSTEDEN ELEMAN SİLMEK;
+
+del liste[2]
+liste
+["emir","yusuf","nagehan","efe"]
+
+LİSTE METODLARI;
+
+append metodu listeye eleman eklemek için kullanılır.
+
+liste.append("emir") sonucunda listeye emir elemanı eklemnmiştir.
+
+remove metodu listeden eleman silmek için kullanılır.
+
+liste.remove("emir") sonucunda listeden emir ellemanını siler.
+
+insert metodu eleman eklemek için kullanılır fakat hangi indexe ekleneceği belirtilir.
+
+liste= ["emir","ömür","eda","nagehan"]
+liste.insert(0,"efe")
+liste= ["efe","emir","ömür","eda","nagehan"]
+
+listenin sonuna bir elemean eklemek istediğimizde ise len metodunu kullanırız örneğin.
+liste.insert(len(liste),"ece")
+liste= ["efe","emir","ömür","eda","nagehan","ece"]
+
+pop metodu liste içindeki elemanları silmek için kullanılır.
+
+liste.pop(0)
+lsite
+["emir","ömür","eda","nagehan","ece"]
+
+count metodu liste içerisindeki aynı elemanları saymak için kullanılır.
+
+liste= ["emir","emir","eda","eda","eda"]
+liste.count("emir")
+2
+liste.count("eda") 
+3
+
+copy metodu elimizdeki mevcut listeyi yedeklemek için kullanılır.
+
+liste_yedek = liste.copy() ilk oluşturmuş olduğumuz listenin yedeğini oluşturur
+
+extend metodu iki listeyi birleştirmek için kullanılır.
+
+liste.extend(["a","b",10]) 
+
+index metodu liste içerisindeki elemanın kaçıncı idexde olduğunu bize söyler.
+
+liste.index("emir")
+0
+
+reverse metodu elemanları terse çevirme işlemi için kullanılıyor.
+
+liste.reverse()
+orjinal hali ["emir","ömür","eda","nagehan","ece"]
+reverse metodundan sonraki hali ["ece","nagehan","eda","ömür","emir"]
+
+sort metodu elemanları sıralama yapmak için kullanılır
+
+liste = [5,1,3,2]
+liste.sort()
+liste
+[1,2,3,5]
+
+clear metodu listeyi temizleme işlemi için kullanılır.
+
+liste = [5,1,3,2]
+liste.clear()
+liste
+[]
+
+
+ 
+
+
